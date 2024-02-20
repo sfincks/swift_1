@@ -77,3 +77,78 @@ throw - используется при генерации ошибок
 fallthrough - используется в switch case для перехода к следующему условию
 break - прерывает цикл
 return - выход из цикла
+
+
+// Функции 
+// Функция без возврата
+func имя функции (){
+    действие
+}
+
+// функция с возвратом
+func имя(имя параметра1 : тип параметра1,имя параметра1 : тип параметра1) -> тип возвращаемого значения {
+    действие
+    return значение
+}
+ // с ярлыком аргумента
+ func имя функции (ярлык аргумента:передаваемое значение){ // with value: Int .... можно указать _ место ярлыка
+    действие
+}
+//inout используется для изменения внутренней переменной
+func name(parameter name : inout Type) {
+    body
+}
+
+
+// Перечисления - позволяют создать список для перечисления заданных значений
+enum Name {
+    case firstcase
+    case secondcase
+    case thirdcase
+}
+
+// перечисления с исходным знаечением 
+enum Name : Type {
+    case firstcase = firstparameter
+    case secondcase = secondparameter
+    case thirdcase = thirdparameter
+}
+// без указания значения string будет выводить имя case , а Int будет выводить порядковый номер case 
+
+// чтобы найти исходное значение в перечисления нужно 
+let name = enumName(rawValue: nameOfRawValue)
+//пример
+let latte = Coffee(rawValue: "latte")
+
+
+
+//Опционалы - тип данных, который может иметь значение, а может и быть nil
+var a: Int = 5
+if a! >5{
+    a! *= 2
+}else {
+    a = nil
+}
+
+//force unwraping - принудительно достаёт значение пепременной. использовать только если 100% ЕСТЬ значение
+
+a! - firce unwraping
+
+// implicity unwraping - механизм распаковки опционалов, когда известно, что значение будет
+var a: Int! = 5
+
+//nil coalescing - механизм, когда nil перменной можно задать другое значение
+
+var name = name ?? value если опционал = nil
+
+// optional bidding - механизм для распаковки опционала с проверкой на наличие значение используя if или guard 
+var a: Int? = 5
+if let name = optional {
+    actioon if optional != nil && 
+}
+
+//guard let 
+guard let name = optional else {
+    return
+}
+action actioon if optional != nil && 
