@@ -65,10 +65,12 @@ enum Pizza: String{
     case deliscios = "Pastrami"
     case pervertion = "PinaplePizza"
 }
-var bestSeller: Pizza = .clasic
-var musthave: Pizza = .deliscios
-var callPolice: Pizza = .pervertion
-print(bestSeller.rawValue, musthave.rawValue, callPolice.rawValue)
 
 //3.Добавить возможность получения названия пиццы через rawValue
+let bestSeller: Pizza = .clasic
+let musthave: Pizza = .deliscios
+let callPolice: Pizza = .pervertion
+print(bestSeller.rawValue, musthave.rawValue, callPolice.rawValue)
+
+
 
