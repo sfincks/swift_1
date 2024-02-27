@@ -20,7 +20,7 @@ struct Pizza {
     var price: Int
     var type: PizzaTypes
     var isFlat: Bool
-    var topings: Topings
+    var toping: Topings
 }
 //3.Создать класс пиццерии, добавить массив с возможными пиццами. Переменная с массивом должна быть приватной. Массив задается в инициализаторе.
 class PizzaCafe{
@@ -34,12 +34,17 @@ class PizzaCafe{
         self.pizzaExemp.append(newPizza)
     }
     
+    func getAllPizzas(){
+        for element in pizzaExemp{
+            print(element)
+        }
+    }
+    
 }
 //5.Создать экземпляр класса пиццерии и добавить в него несколько пицц.
 
-let calzone = Pizza(price: 15, type: .calzone, isFlat: false, topings: .cheese)
-let pepperoni = Pizza(price: 12, type: .pepperoni, isFlat: true, topings: .pepperoni)
+let calzone = Pizza(price: 15, type: .calzone, isFlat: false, toping: .cheese)
+let pepperoni = Pizza(price: 12, type: .pepperoni, isFlat: true, toping: .pepperoni)
 
 var pizzaCafe = PizzaCafe(pizzaArray: [calzone,pepperoni])
-
-#fileLiteral(resourceName: "Lesson4.swift")
+pizzaCafe.getAllPizzas()
