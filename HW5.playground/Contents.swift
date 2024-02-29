@@ -4,15 +4,15 @@ import UIKit
 class PizzaCafe<T>{
     
     
-    enum Size {
-        case small
-        case medium
-        case large
-        case XL
+    enum FrenchFriesSize: Double {
+        case small = 3
+        case medium = 4
+        case large = 5
+        case XL = 6
     }
     struct FrenchFries {
         var price: Double
-        var size: Size
+        var size: FrenchFriesSize
     }
     
     enum PizzaTypes: Double{
@@ -54,13 +54,13 @@ class PizzaCafe<T>{
         }
     }
 }
-let standartFrenchFries = PizzaCafe<Any>.FrenchFries(price: 4, size: .medium)
-let calzone = PizzaCafe<Any>.Pizza(price: 15, type: .calzone, isFlat: false, toping: .cheese)
+let standartFrenchFries = PizzaCafe<Any>.FrenchFries(price: PizzaCafe<Any>.FrenchFriesSize.medium.rawValue, size: .medium)
+let calzone = PizzaCafe<Any>.Pizza(price: PizzaCafe<Any>.PizzaTypes.calzone.rawValue, type: .calzone, isFlat: false, toping: .cheese)
 
 var pizzaCafe = PizzaCafe(fastFoodArray: [standartFrenchFries,calzone])
 pizzaCafe.printAllFood()
 //2.
-let smallFrenchFries = PizzaCafe<Any>.FrenchFries(price: 3, size: .small)
+let smallFrenchFries = PizzaCafe<Any>.FrenchFries(price: PizzaCafe<Any>.FrenchFriesSize.small.rawValue, size: .small)
 pizzaCafe.addFastFood(newFastFood: smallFrenchFries)
 pizzaCafe.printAllFood()
 //3.Создайте протокол, в котором будут содержаться функции открытия и закрытия.

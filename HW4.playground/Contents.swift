@@ -12,7 +12,7 @@ class PizzaCafe{
         case calzone = 15
     }
     struct Pizza {
-        var price: Double
+        var price: Double //{type.rawValue}
         var type: PizzaTypes
         var isFlat: Bool
         var toping: Topings
@@ -43,8 +43,8 @@ class PizzaCafe{
 }
 //5.Создать экземпляр класса пиццерии и добавить в него несколько пицц.
 
-let calzone = PizzaCafe.Pizza(price: 15, type: .calzone, isFlat: false, toping: .cheese)
-let pepperoni = PizzaCafe.Pizza(price: 12, type: .pepperoni, isFlat: true, toping: .pepperoni)
+let calzone = PizzaCafe.Pizza(price: PizzaCafe.PizzaTypes.calzone.rawValue, type: .calzone, isFlat: false, toping: .cheese)
+let pepperoni = PizzaCafe.Pizza(price: PizzaCafe.PizzaTypes.pepperoni.rawValue, type: .pepperoni, isFlat: true, toping: .pepperoni)
 
 var pizzaCafe = PizzaCafe(pizzaArray: [calzone,pepperoni])
 pizzaCafe.getAllPizzas()
