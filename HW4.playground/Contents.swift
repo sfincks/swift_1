@@ -36,7 +36,7 @@ class PizzaCafe{
     
     func getAllPizzas(){
         for element in pizzaExemp{
-            print(element)
+            print(element)	
         }
     }
     
